@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd -f .env.development gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -14,18 +14,68 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "@hot-loader/react-dom": "^16.13.0",
+    "eslint-utils": "^2.1.0",
     "gatsby": "^2.23.3",
+    "gatsby-image": "^2.2.4",
+    "gatsby-plugin-catch-links": "^2.1.0",
+    "gatsby-plugin-feed": "^2.3.2",
+    "gatsby-plugin-google-analytics": "^2.1.1",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-netlify": "^2.0.13",
+    "gatsby-plugin-nprogress": "^2.1.0",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-sass": "^2.3.4",
+    "gatsby-plugin-sharp": "^2.6.12",
+    "gatsby-plugin-sitemap": "2.2.1",
+    "gatsby-remark-autolink-headers": "^2.1.0",
+    "gatsby-remark-copy-linked-files": "^2.1.0",
+    "gatsby-remark-images": "^3.3.11",
+    "gatsby-remark-prismjs": "3.3.1",
+    "gatsby-remark-relative-images": "^0.3.0",
+    "gatsby-source-filesystem": "^2.3.12",
+    "gatsby-transformer-remark": "^2.8.17",
+    "gatsby-transformer-sharp": "2.2.1",
+    "lodash": "^4.17.13",
+    "lodash.kebabcase": "^4.1.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.14.1",
+    "prismjs": "^1.15.0",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-github-btn": "^1.1.1",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^3.10.0",
+    "react-router-dom": "^5.2.0",
+    "sharp": "^0.22.1",
+    "url-join": "^4.0.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "env-cmd": "^10.1.0",
+    "prettier": "2.0.5",
+    "babel-eslint": "^10.0.1",
+    "cli-glob": "^0.1.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "remark-cli": "^6.0.1",
+    "remark-preset-lint-recommended": "^3.0.1",
+    "stylefmt": "^6.0.3",
+    "stylelint": "^10.1.0",
+    "stylelint-config-standard": "^18.0.0",
+    "write-good": "^1.0.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
+  "repository": "https://github.com/gatsbyjs/gatsby-starter-hello-world",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "main": "index.js",
+  "author": "Beto Rendon <betorendonruiz@gmail.com>"
 }
