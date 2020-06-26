@@ -27,6 +27,17 @@ module.exports = {
         plugins: [
           'gatsby-remark-relative-images',
           {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: false,
+              prompt: {
+                user: "B3TINSKY",
+                host: "localhost",
+                global: false,
+              },
+            }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 750,

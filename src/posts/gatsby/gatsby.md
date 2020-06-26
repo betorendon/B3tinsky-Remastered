@@ -14,7 +14,7 @@ I just launched a new bootcamp!
 2. GraphQL
 3. React
 
-```javascript
+```jsx
 
     console.log(data);
     return (
@@ -27,7 +27,7 @@ I just launched a new bootcamp!
                         <li className={blogStyles.post}>
                             <Link to={`/blog/${edge.node.slug}`}>
                             <h2>{edge.node.title}</h2>
-                            <p>{edge.node.publishedDate}</p>
+                            <p>{edge.node.publishedDate.thisIsTheGoodOne.noForRealTheBest.SubaruSubashi}</p>
                             </Link>
                         </li>
                     )
@@ -36,4 +36,11 @@ I just launched a new bootcamp!
             </Layout>
     )
 
+```
+
+```cmd
+cd Desktop/folder
+cd ..
+dir
+cls
 ```
