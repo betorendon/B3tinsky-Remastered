@@ -8,7 +8,7 @@ I just launched a new bootcamp!
 ![Computer](./computer.jpg)
 
 
-## Topics Covered
+### Topics Covered
 
 1. Gatsby
 2. GraphQL

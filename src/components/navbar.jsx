@@ -13,10 +13,10 @@ class Navbar extends Component {
           <Link className={navStyles.logo} to="/">B3TINSKY</Link>
           <ul>
             <li>
-              <Link className={navStyles.listLink} to="/about">About Me</Link>
+              <Link className={navStyles.listLink} to="/about">About</Link>
             </li>
             <li>
-              <Link className={navStyles.listLink} to="/blog">Code</Link>
+              <Link className={navStyles.listLink} to="/blog">Blog</Link>
             </li>
           </ul>
       </nav>

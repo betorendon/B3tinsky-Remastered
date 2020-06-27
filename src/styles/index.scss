@@ -27,21 +27,6 @@ h3 { font: 700 2.0rem/1.2 "Raleway"; color: rgb(255, 227, 151); }
 p { font: 400 1.5rem/1.5 "Raleway"; color: rgb(255, 255, 255); }
 li { font: 400 1.5rem/1.5 "Raleway"; color: rgb(255, 255, 255); }
 
-
-.indexBackGround {
-    width: 100%;
-    height: 100vh;
-    // background: url(../Images/fondo9.gif) no-repeat 50%;
-    background-size: cover;
-    /*https://i.pinimg.com/originals/97/b3/12/97b312409fbcabc96d97ef45bf8f852b.gif*/
-}
-@media (max-width: 6.5in) { 
-    .indexBackGround { 
-        width: 100%;
-        // background: url(../Images/fondo9.gif) no-repeat 19%;
-        background-size: cover;
-        height: 100vh; 
-    } }
 a {
     text-decoration: none;
     color: white; 

@@ -8,17 +8,16 @@ import layoutStyles from '../styles/components/layout.module.scss'
 const Layout = (props) => {
     return (
 
-            <div>
-
-            <Navbar />
-        <div className={layoutStyles.container}>
-            <div className={layoutStyles.content}>
-            {/* <Header /> */}
-            {props.children}
+    <div>
+        <Navbar />
+            <div className={layoutStyles.container}>
+                <div className={layoutStyles.content}>
+                    {/* <Header /> */}
+                    {props.children}
+                </div>
+                {/* <Footer /> */}
             </div>
-            <Footer />
-            </div>
-        </div>
+    </div>
 
     )
 }

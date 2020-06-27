@@ -1,0 +1,36 @@
+.posts {
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+    // padding: 1rem;
+}
+
+.post {
+    // margin: 1rem 0;
+
+    a {
+        // background: white;
+        color: white;
+        display: block;
+        // padding: 1%;
+        text-decoration: none;
+    }
+
+    a:hover {
+        h2 { 
+            color: orange;
+            text-shadow: 0 10px 1px white, 0 -10px 1px rgb(255, 115, 0); 
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+        color: white
+    }
+
+    p {
+        color: orange;
+        font-size: .8rem;
+        font-style: italic;
+    }
+}
