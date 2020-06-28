@@ -24,7 +24,7 @@ const BooksPage = () => {
       },
       allFile( filter: {
                 extension : {regex: "/(jpg)|(png)/"}
-                relativeDirectory: {regex: "/(images/books)|(books)/"
+                relativeDirectory: {regex: "/images/books/"
               }
             }
           ) {
@@ -47,43 +47,44 @@ const BooksPage = () => {
       }
     }
   `)
-  // let books = [];
-  // {data.allFile.edges.map(({node})=>(
-  //   books.push({
-  //     year: node.relativeDirectory.slice(13, 17),
-  //     title: node.name,
-  //     cover: node.childImageSharp.fluid
-  //   })
-  // ))}
+  let books = [];
+  {data.allFile.edges.map(({node})=>(
+    books.push({
+      year: node.relativeDirectory.slice(13, 17),
+      title: node.name,
+      cover: node.childImageSharp.fluid
+    })
+  ))}
     return (
             <Layout>
             <Head title="Books" />
             <h1>Books</h1>
             <div className={booksStyles.row}>
                 <div className={booksStyles.listColumn} >
-
+                    {data.allDirectory.edges.map(({node})=>(
+                      <div>
+                        <h3 style={{margin:0, direction: "ltr"}}>{node.name}</h3>
                         <div>
                           {data.allFile.edges.map(({node})=>(
-                    
+                          (node.relativeDirectory.slice(13, 17) == '2019') && ( 
                           <p 
                           onMouseEnter={() =>  setCurr(node.childImageSharp.fluid)}
                           onMouseLeave={() =>  setCurr(null)}
                           style={{margin:0, direction: "ltr"}}
-                          className={booksStyles.bookTitle}
                           >
                           {node.name}
                           </p>
-                          
+                          )
                           ))}
                         </div>
-             
-
+                      </div>
+                    ))}
                 </div>
 
                 <div className={booksStyles.imageColumn}>
-                        {curr ? ( 
+                        {curr && ( 
                         <Img fluid={curr}/> 
-                        ) : (<h3 style={{fontSize: "20px", paddingTop: "200px", textAlign: "center"}}>Hover Over A Title ;)</h3>)}
+                        )}
                 </div>
 
             </div>

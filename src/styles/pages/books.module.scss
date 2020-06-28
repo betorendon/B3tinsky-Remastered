@@ -12,9 +12,25 @@
     flex-basis: 100%;
     flex: 1;
     overflow: auto;
-    height: 45vw;
+    height: 43rem;
     direction: rtl;
   }
+
+  @media (max-width: 800px) {
+    .listColumn {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      overflow: auto;
+      height: 35rem;
+      direction: rtl;
+    }
+    .bookTitle {
+      font-size: 1rem;
+    }
+}
+
   .imageColumn {
     padding: 0;
     display: flex;
@@ -28,4 +44,8 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 2;
+  }
+
+  .bookTitle:hover {
+    color: orange;
   }
