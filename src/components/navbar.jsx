@@ -26,8 +26,6 @@ class Navbar extends Component {
   }
   
   handleClick = () => {
-    console.log('Button Clicked...')
-    console.log(this.state.open)
     if (this.state.open == true) {
       this.setState({ open: false })
     } else {
