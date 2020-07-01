@@ -26,7 +26,7 @@ class Navbar extends Component {
   }
   
   handleClick = () => {
-    if (this.state.open == true) {
+    if (this.state.open === true) {
       this.setState({ open: false })
     } else {
       this.setState({ open: true })
@@ -36,7 +36,7 @@ class Navbar extends Component {
     const { scrolled } = this.state
     const { open } = this.state
     return (
-      <nav className={scrolled ? navStyles.black : ""}>
+      <nav className={scrolled ? navStyles.black : navStyles.transparent}>
           <div className={navStyles.menuIcon}>
             
           <FontAwesomeIcon icon={faTerminal} transform="down-7 grow-2.5" onClick={this.handleClick}/>
@@ -54,13 +54,4 @@ class Navbar extends Component {
     )
   }
 }
-{/* <script type="text/javascript">
-
-$(document).ready(function() {
-    $(".menu-icon").on("click", function() {
-        $("nav ul").toggleClass("showing");
-    });
-});
-
-</script> */}
 export default Navbar;
