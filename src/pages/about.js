@@ -1,21 +1,51 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
-import me from '../styles/Images/ItsAMe.png'
+import Img from 'gatsby-image'
 
 const AboutPage = () => {
+    const data = useStaticQuery(graphql`
+query {
+    allFile(
+      filter: {
+        extension: { regex: "/(png)/" }
+        relativeDirectory: { regex: "/(styles/Images)/" }
+      }
+    ) {
+      edges {
+        node {
+          base
+          name
+          relativeDirectory
+          childImageSharp {
+            fluid {
+              aspectRatio
+              sizes
+              originalImg
+              base64
+              src
+              srcSet
+            }
+          }
+        }
+      }
+    }
+  }
+`)
     return (
             <Layout>
                 <Head title="About" />
                     <h1>About Me</h1>
                     <p>I'm Beto Rendon, a Computer Science student with an interest in web & software development. I'm a horror film enthusiast (specially 80's films). I love reading and making music.</p>
-                    <img src={me} style={{
+                    {data.allFile.edges.map(({ node }) => (
+                    <Img fluid={node.childImageSharp.fluid} style={{
                         gridColumn: "4 / 5",
                         width: "100%",
                         borderRadius: "5%"}}
                         alt="TheBert"
                     />
+                    ))}
                     <figcaption style={{
                         marginTop: '0.5rem',
                         display: 'flex',
