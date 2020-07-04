@@ -157,12 +157,10 @@ Enter a number:
 ''
 ```
 ### Limit, Timeout & Default
-----------------------------------------------------------------------
 
 By default the PyInputPlus functions will continue to ask (prompt) the user for a different answer indefinetly. If we want to limit the number of attempts, we can use several keywords such as __Limit or Timeout__.
 
-----------------------------------------------------------------------
->
+
 ```python
 >>> import pyinputplus as pyip
 
@@ -184,13 +182,9 @@ Traceback (most recent call last):
     --snip--
 pyinputplus.TimeoutException
 ```
-> 
-----------------------------------------------------------------------
 
-When using these arguments, we can also use a __*default*__ value on which our code will fall back on instead of a __traceback error__.
+> When using these arguments, we can also use a __*default*__ value on which our code will fall back on instead of a __traceback error__.
 
-----------------------------------------------------------------------
->
 ```python
 >>> response = pyip.inputNum(prompt='Enter a number: ' ,limit=2, default='N/A')     
 Enter a number: lol
