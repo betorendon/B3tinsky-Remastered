@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
@@ -9,7 +9,10 @@ const BooksPage = () => {
   // const [curr, setCurr] = useState(null)
   const data = useStaticQuery(graphql`
     query {
-      allDirectory(filter: { relativeDirectory: { regex: "/images/books/" } }) {
+      allDirectory(
+        filter: { relativeDirectory: { regex: "/images/books/" } }
+        sort: { fields: base, order: DESC }
+      ) {
         edges {
           node {
             relativePath
@@ -24,6 +27,7 @@ const BooksPage = () => {
           relativeDirectory: { regex: "/(images/books)|(books)/" }
         }
       ) {
+        totalCount
         edges {
           node {
             base
@@ -44,34 +48,62 @@ const BooksPage = () => {
       }
     }
   `)
-  // let books = [];
-  // {data.allFile.edges.map(({node})=>(
-  //   books.push({
-  //     year: node.relativeDirectory.slice(13, 17),
-  //     title: node.name,
-  //     cover: node.childImageSharp.fluid.originalImg
-  //   })
-  // ))}
-  // console.log(books);
+
+  let years = []
+  {
+    data.allDirectory.edges.map(({ node }) => years.push(node.base))
+  }
+
+  let books = []
+  {
+    data.allFile.edges.map(({ node }) => books.push(node))
+  }
+
+  let total = 0
+
+  let yearsTotal = []
+  {
+    years.map(year => {
+      books
+        .filter(bookYear => bookYear.relativeDirectory.slice(13, 17) === year)
+        .map(book => (total += 1))
+      yearsTotal.push(total)
+      total = 0
+    })
+  }
+
   return (
     <div>
-      <Navbar />
       <Head title="Books" />
-      <section className={booksStyles.photogrid}>
-        {data.allFile.edges.map(({ node }) => (
-          <div className={booksStyles.box}>
-            <div className={booksStyles.imgBox}>
-              <img
-                src={node.childImageSharp.fluid.originalImg}
-                alt={node.name}
-              ></img>
-            </div>
-          </div>
-        ))}
-      </section>
+      <Navbar />
       <br />
       <br />
       <br />
+      <br />
+      {years.map(year => (
+        <div>
+          <h1 className={booksStyles.bookTotalContainer}>
+            {year} ( {yearsTotal[total]} Books )
+          </h1>
+          {(total += 1)}
+          <section className={booksStyles.photogrid}>
+            {books
+              .filter(
+                bookYear => bookYear.relativeDirectory.slice(13, 17) === year
+              )
+              .map(book => (
+                <div className={booksStyles.box}>
+                  <div className={booksStyles.imgBox}>
+                    <img
+                      src={book.childImageSharp.fluid.src}
+                      alt={book.name}
+                    ></img>
+                  </div>
+                </div>
+              ))}
+          </section>
+        </div>
+      ))}
     </div>
   )
 }
