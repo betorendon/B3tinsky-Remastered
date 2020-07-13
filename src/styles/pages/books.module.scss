@@ -33,35 +33,6 @@
    
 }
 
-@media (max-width: 1200px) {
-    .photogrid {
-        -moz-column-count: 4;
-        -webkit-column-count: 4;
-        column-count: 4;
-    }
-}
-@media (max-width: 1000px) {
-    .photogrid {
-        -moz-column-count: 3;
-        -webkit-column-count: 3;
-        column-count: 3;
-    }
-}
-@media (max-width: 800px) {
-    .photogrid {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-@media (max-width: 400px) {
-    .photogrid {
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
-        column-count: 1;
-    }
-}
-
 .box
 {
     position: relative;
@@ -75,10 +46,12 @@
 }
 .box:hover
 {
-    // transform: translateY(30px);
-    padding: 1%;
+    transform: scale(1.1,1.1);
+    // padding: 5%;
     z-index: 1;
-    // box-shadow: 0 50px 50px rgba(0, 0, 0.5);
+    box-shadow: 0 50px 50px ;
+    transition: 0.2s;
+    overflow: visible;
 }
 
 .box .imgBox
@@ -90,14 +63,12 @@
 {
     transition: .5s;
 }
-.box:hover .imgBox img
-{
-    opacity: 0.5;
-    //  transform: translateY(-10px);
+// .box:hover .imgBox img
+// {
+//     opacity: 0.5;
+//     //  transform: translateY(-10px);
     
-}
-
-
+// }
 
 .box .content
 {
@@ -165,9 +136,38 @@
     text-align: center;
 }
 
-// .bookTotal {
-//     width: 100%;
-//     background-color: blue;
-//     text-align: center;
-    
-// }
+@media (max-width: 1200px) {
+    .photogrid {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+    .box:hover
+{
+    transform: scale(0.9,0.9);
+    // padding: 5%;
+    z-index: 100;
+    // box-shadow: 0 50px 50px rgba(0, 0, 0.5);
+}
+}
+@media (max-width: 1000px) {
+    .photogrid {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+@media (max-width: 800px) {
+    .photogrid {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media (max-width: 400px) {
+    .photogrid {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
