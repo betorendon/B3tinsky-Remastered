@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
 import booksStyles from "../styles/pages/books.module.scss"
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
 
 const BooksPage = () => {
   // const [curr, setCurr] = useState(null)
@@ -80,10 +80,14 @@ const BooksPage = () => {
       <br />
       <br />
       <br />
+      <h1 className={booksStyles.bookTotal} style={{color:'white'}}>📚 Total ( {data.allFile.totalCount} )</h1>
       {years.map(year => (
         <div>
-          <h1 className={booksStyles.bookTotalContainer}>
-            {year} ( {yearsTotal[total]} Books )
+          <h1 className={booksStyles.bookTotal}>
+            - {year} -
+          </h1>
+          <h1 className={booksStyles.bookTotal}>
+            ( {yearsTotal[total]} Books )
           </h1>
           {(total += 1)}
           <section className={booksStyles.photogrid}>
@@ -98,6 +102,7 @@ const BooksPage = () => {
                       src={book.childImageSharp.fluid.src}
                       alt={book.name}
                     ></img>
+                    {/* <Img fluid={book.childImageSharp.fluid} /> */}
                   </div>
                 </div>
               ))}
