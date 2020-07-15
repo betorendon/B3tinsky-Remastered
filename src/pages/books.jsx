@@ -1,4 +1,4 @@
-import React, { useCallback } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Navbar from "../components/navbar"
 import Head from "../components/head"
@@ -50,27 +50,25 @@ const BooksPage = () => {
   `)
 
   let years = []
-  {
-    data.allDirectory.edges.map(({ node }) => years.push(node.base))
-  }
+  
+  data.allDirectory.edges.map(({ node }) => years.push(node.base))
+  
 
   let books = []
-  {
-    data.allFile.edges.map(({ node }) => books.push(node))
-  }
-
+  
+  data.allFile.edges.map(({ node }) => books.push(node))
+  
   let total = 0
 
   let yearsTotal = []
-  {
-    years.map(year => {
-      books
-        .filter(bookYear => bookYear.relativeDirectory.slice(13, 17) === year)
-        .map(book => (total += 1))
-      yearsTotal.push(total)
-      total = 0
-    })
-  }
+  
+  years.map(year => {
+    books
+      .filter(bookYear => bookYear.relativeDirectory.slice(13, 17) === year)
+      .map(book => (total += 1))
+    yearsTotal.push(total)
+    total = 0
+  })
 
   return (
     <div>
@@ -80,7 +78,7 @@ const BooksPage = () => {
       <br />
       <br />
       <br />
-      <h1 className={booksStyles.bookTotal} style={{color:'white'}}>📚 Total ( {data.allFile.totalCount} )</h1>
+      <h1 className={booksStyles.bookTotal} style={{color:'white'}}><span role="img" aria-label="books">📚</span> Total ( {data.allFile.totalCount} )</h1>
       {years.map(year => (
         <div>
           <h1 className={booksStyles.bookTotal}>
