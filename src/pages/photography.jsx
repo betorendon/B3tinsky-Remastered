@@ -1,16 +1,66 @@
-import React from 'react'
-import Layout from '../components/layout'
-import Head from '../components/head'
-
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import Navbar from "../components/navbar"
+import Head from "../components/head"
+import photographyStyles from "../styles/pages/photography.module.scss"
+import Img from "gatsby-image"
 
 const PhotographyPage = () => {
-    return (
-            <Layout>
-            <Head title="Photography"/>
-            <h1>Under Construction :P</h1>
-            {/* <p>The best way to reach me is via <a href="https://twitter.com/Humbertacou" target="_blank">Musaraña Anonima</a> on Twitter!</p> */}
-            </Layout>
-    )
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: {
+          extension: { regex: "/(jpg)|(png)/" }
+          relativeDirectory: { regex: "/(images/photography)|(photography)/" }
+        }
+        sort: { fields: name, order: ASC }
+      ) {
+        edges {
+          node {
+            base
+            name
+            relativeDirectory
+            childImageSharp {
+              fixed(width: 500, quality: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <div>
+      <Head title="Photography" />
+      <Navbar />
+      <section className={photographyStyles.photogrid}>
+        {data.allFile.edges.map(({ node }) => (
+          <div className={photographyStyles.bg}>
+            <Img
+              fixed={node.childImageSharp.fixed}
+              alt={node.name}
+              objectFit="cover"
+              objectPosition="50% 50%"
+            />
+          </div>
+        ))}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </section>
+    </div>
+  )
 }
 
 export default PhotographyPage

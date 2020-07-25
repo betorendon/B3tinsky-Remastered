@@ -87,7 +87,7 @@ const BooksPage = () => {
           <h1 className={booksStyles.bookTotal}>
             ( {yearsTotal[total]} Books )
           </h1>
-          {(total += 1)}
+          <div style={{display:'none'}}>{(total += 1)}</div>
           <section className={booksStyles.photogrid}>
             {books
               .filter(
