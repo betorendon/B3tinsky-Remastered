@@ -36,6 +36,10 @@ query {
     return (
             <Layout>
                 <Head title="About" />
+                <br />
+                <br />
+                <br />
+                <br />
                     {data.allFile.edges.map(({ node }) => (
                     <Img 
                       fluid={node.childImageSharp.fluid} 
