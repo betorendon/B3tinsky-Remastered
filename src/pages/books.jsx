@@ -26,6 +26,7 @@ const BooksPage = () => {
           extension: { regex: "/(jpg)|(png)/" }
           relativeDirectory: { regex: "/(images/books)|(books)/" }
         }
+        sort: { fields: birthTime, order: DESC }
       ) {
         totalCount
         edges {
@@ -35,12 +36,8 @@ const BooksPage = () => {
             relativeDirectory
             childImageSharp {
               fluid {
-                originalImg
-                aspectRatio
-                base64
-                sizes
                 src
-                srcSet
+                originalImg
               }
             }
           }
@@ -50,18 +47,17 @@ const BooksPage = () => {
   `)
 
   let years = []
-  
+
   data.allDirectory.edges.map(({ node }) => years.push(node.base))
-  
 
   let books = []
-  
+
   data.allFile.edges.map(({ node }) => books.push(node))
-  
+
   let total = 0
 
   let yearsTotal = []
-  
+
   years.map(year => {
     books
       .filter(bookYear => bookYear.relativeDirectory.slice(13, 17) === year)
@@ -78,16 +74,24 @@ const BooksPage = () => {
       <br />
       <br />
       <br />
-      <h1 className={booksStyles.bookTotal} style={{color:'white'}}><span role="img" aria-label="books">📚</span> Total ( {data.allFile.totalCount} )</h1>
+      <h1 className={booksStyles.bookTotal} style={{ color: "white" }}>
+        <span role="img" aria-label="books">
+          📚
+        </span>
+        {" "}
+        {data.allFile.totalCount}
+        {" "}
+        <span role="img" aria-label="books">
+          📚
+        </span>
+      </h1>
       {years.map(year => (
         <div>
-          <h1 className={booksStyles.bookTotal}>
-            - {year} -
-          </h1>
+          <h1 className={booksStyles.bookTotal}>- {year} -</h1>
           <h1 className={booksStyles.bookTotal}>
             ( {yearsTotal[total]} Books )
           </h1>
-          <div style={{display:'none'}}>{(total += 1)}</div>
+          <div style={{ display: "none" }}>{(total += 1)}</div>
           <section className={booksStyles.photogrid}>
             {books
               .filter(
@@ -99,8 +103,7 @@ const BooksPage = () => {
                     <img
                       src={book.childImageSharp.fluid.src}
                       alt={book.name}
-                    ></img>
-                    {/* <Img fluid={book.childImageSharp.fluid} /> */}
+                    />
                   </div>
                 </div>
               ))}
