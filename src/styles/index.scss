@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
 
+
 body {
         width: 100%;
         height: 100%;
@@ -44,7 +45,23 @@ a {
     animation: animate 30s ease-in-out infinite;
     background-size: 10%; */
 }
-@media (max-width: 6.5in) { .book_year_divider { font-size: 3.5em; } }
+
+#homeBackground {
+    background: url('HomeBackground.gif');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+@media (max-width: 1200px) {
+    #homeBackground {
+        background: url('HomeBackground.gif') no-repeat 20%;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+}
 
 @keyframes animate {
     0% {

@@ -6,13 +6,7 @@ import bg from '../styles/HomeBackground.gif'
 const IndexPage = () => {
   return (
     
-      <div style={{
-        background: `url(${bg})` ,
-        backgroundRepeat: 'no-repeat',
-        width: "100%",
-        height: "100vh",
-        backgroundSize: "cover"
-      }}>
+        <div id='homeBackground'>
     <Layout>
       <Head title="Home"/>
       {/* <h1>Hello</h1>
