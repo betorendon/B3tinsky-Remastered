@@ -1,6 +1,7 @@
 ---
 title: "Conway's Game of Life Using React Hooks"
 date: "2020-07-03"
+tags: ['Javascript', 'React']
 ---
 
 ### The Game
