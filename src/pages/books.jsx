@@ -36,6 +36,10 @@ const BooksPage = () => {
             relativeDirectory
             childImageSharp {
               fluid {
+                sizes
+                aspectRatio
+                srcSet
+                base64
                 src
                 originalImg
               }
@@ -74,23 +78,27 @@ const BooksPage = () => {
       <br />
       <br />
       <br />
-      <h1 className={booksStyles.bookTotal} style={{ color: "white" }}>
+      <h1
+        className={booksStyles.bookTotal}
+        style={{ color: "white", fontSize: "4vw" }}
+      >
         <span role="img" aria-label="books">
           📚
-        </span>
-        {" "}
-        {data.allFile.totalCount}
-        {" "}
+        </span>{" "}
+        {data.allFile.totalCount}{" "}
         <span role="img" aria-label="books">
           📚
         </span>
       </h1>
       {years.map(year => (
         <div>
-          <h1 className={booksStyles.bookTotal}>- {year} -</h1>
           <h1 className={booksStyles.bookTotal}>
-            ( {yearsTotal[total]} Books )
+            [ <span style={{ color: "white" }}>{year}</span> ]{" "}
+            <span style={{ fontStyle: "italic", color: "white" }}>
+              {yearsTotal[total]} Books
+            </span>
           </h1>
+
           <div style={{ display: "none" }}>{(total += 1)}</div>
           <section className={booksStyles.photogrid}>
             {books
@@ -98,13 +106,8 @@ const BooksPage = () => {
                 bookYear => bookYear.relativeDirectory.slice(13, 17) === year
               )
               .map(book => (
-                <div className={booksStyles.box}>
-                  <div className={booksStyles.imgBox}>
-                    <img
-                      src={book.childImageSharp.fluid.src}
-                      alt={book.name}
-                    />
-                  </div>
+                <div className={booksStyles.image}>
+                  <Img fluid={book.childImageSharp.fluid} alt={book.name}/>
                 </div>
               ))}
           </section>
