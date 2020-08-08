@@ -21,8 +21,13 @@ const PhotographyPage = () => {
             name
             relativeDirectory
             childImageSharp {
-              fixed(width: 500, quality: 100) {
-                ...GatsbyImageSharpFixed
+              fluid {
+                src
+                srcSet
+                base64
+                originalImg
+                sizes
+                aspectRatio
               }
             }
           }
@@ -35,29 +40,14 @@ const PhotographyPage = () => {
       <Head title="Photography" />
       <Navbar />
       <section className={photographyStyles.photogrid}>
-        {data.allFile.edges.map(({ node }) => (
-          <div className={photographyStyles.bg}>
+        {data.allFile.edges.map(({ node }, index) => (
+
             <Img
-              fixed={node.childImageSharp.fixed}
+              key={index}
+              fluid={node.childImageSharp.fluid}
               alt={node.name}
-              objectFit="cover"
-              objectPosition="50% 50%"
             />
-          </div>
         ))}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </section>
     </div>
   )

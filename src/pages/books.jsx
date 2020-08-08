@@ -90,8 +90,8 @@ const BooksPage = () => {
           📚
         </span>
       </h1>
-      {years.map(year => (
-        <div>
+      {years.map((year, index) => (
+        <div key={index}>
           <h1 className={booksStyles.bookTotal}>
             [ <span style={{ color: "white" }}>{year}</span> ]{" "}
             <span style={{ fontStyle: "italic", color: "white" }}>
@@ -105,8 +105,8 @@ const BooksPage = () => {
               .filter(
                 bookYear => bookYear.relativeDirectory.slice(13, 17) === year
               )
-              .map(book => (
-                <div className={booksStyles.image}>
+              .map((book, index) => (
+                <div key={index} className={booksStyles.image}>
                   <Img fluid={book.childImageSharp.fluid} alt={book.name}/>
                 </div>
               ))}

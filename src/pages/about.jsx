@@ -40,8 +40,9 @@ query {
                 <br />
                 <br />
                 <br />
-                    {data.allFile.edges.map(({ node }) => (
+                    {data.allFile.edges.map(({ node }, index) => (
                     <Img 
+                      key={index}
                       fluid={node.childImageSharp.fluid} 
                       style={{
                           gridColumn: "4 / 5",
