@@ -11,7 +11,7 @@ $Python: #3776ab, #ffd343, bolder, normal;
 $ATBS: rgb(248, 255, 144), black, bolder, normal;
 $ComputerScience: rgb(12, 85, 16), rgb(255, 255, 255), bolder, normal;
 $Linux: rgb(0, 0, 0), rgb(255, 255, 255), bolder, normal;
-$Bash: rgb(88, 88, 88), rgb(255, 255, 255), bolder, normal;
+$Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
 
 [class*="Javascript"]{@include tag($Javascript...);}
 [class*="React"]     {@include tag($React...); border-color: rgb(91, 92, 92) !important;}
@@ -23,7 +23,7 @@ $Bash: rgb(88, 88, 88), rgb(255, 255, 255), bolder, normal;
 
 [class*="tagPill-"] {
     border-radius: 4px;
-    border: 3px solid black;
+    border: 2px solid black;
     padding: 2px 6px;
     margin-right: 5px;
     font-size: 90%;
@@ -64,7 +64,7 @@ $Bash: rgb(88, 88, 88), rgb(255, 255, 255), bolder, normal;
 
     p {
         color: orange;
-        font-size: .8rem;
+        font-size: 1rem;
         font-style: italic;
     }
 }
