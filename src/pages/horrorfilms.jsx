@@ -24,6 +24,8 @@ const HorrorFilmsPage = () => {
                 base64
                 src
                 srcSet
+                aspectRatio
+                sizes
               }
             }
           }
@@ -36,8 +38,8 @@ const HorrorFilmsPage = () => {
       <Navbar />
       <Head title="Horror Films" />
       <section className={horrorStyles.photogrid}>
-        {data.allFile.edges.map(({ node }) => (
-          <div className={horrorStyles.box}>
+        {data.allFile.edges.map(({ node }, index) => (
+          <div className={horrorStyles.box} key={index}>
             <div className={horrorStyles.imgBox}>
               <img src={node.childImageSharp.fluid.originalImg} alt={node.name}></img>
               <div className={horrorStyles.content}>

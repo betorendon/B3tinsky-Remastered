@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-
-// .photoBody {
-//     width: 100%;
-//     height: 100%;
-//     margin: 0;
-//     max-width: 100%;
-//     padding: 0;
-// }
-
 .content {
     width: 100%;
     // margin: 0em auto;
@@ -18,7 +9,6 @@
 }
 
 .photogrid {
-    // line-height: 0;
     -webkit-column-count: 5;
     -webkit-column-gap: 0px;
     -moz-column-count: 5;
@@ -31,6 +21,10 @@
     width: 100% !important;
     height: 100% !important;
 }
+
+// picture img {
+//     position: relative !important;
+// }
 
 @media (max-width: 1200px) {
     .photogrid {
@@ -46,20 +40,7 @@
         column-count: 3;
     }
 }
-@media (max-width: 800px) {
-    .photogrid {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-@media (max-width: 400px) {
-    .photogrid {
-        -moz-column-count: 1;
-        -webkit-column-count: 1;
-        column-count: 1;
-    }
-}
+
 
 .box
 {
@@ -117,7 +98,7 @@
 }
 .box .content h3
 {
-    font-size: 20px;
+    font-size: 2rem;
     color: #fff;
     font-weight: 700;
     font-family: 'Raleway';

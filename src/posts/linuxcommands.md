@@ -1,6 +1,7 @@
 ---
 title: "Starter Linux Commands"
 date: "2019-12-31"
+tags: ["Bash", "Linux"]
 ---
 
 Linux is a great operating system with many useful distributions, but many of us are used to the Windows and Mac type of GUI (Graphical User Interface) and may feel lost in a different environment and discard it all together. Even though Linux has a graphical interface for many of its distributions, the real efficiency and productivity spikes when using the terminal (console). So to get you up and running on Linux, I prepared this *Linux Commands starter kit*.

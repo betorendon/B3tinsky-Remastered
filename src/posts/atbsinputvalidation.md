@@ -1,6 +1,7 @@
 ---
 title: "ATBS - Input Validation"
 date: "2020-01-17"
+tags: ["ATBS", "Python"]
 ---
 If you have any experience with programming, you probably already know that annoying moment when you ask someone to test 
 your code, and that person does something you thought no able minded human being would even try. That is an "Another day, another bug" type of situation. 

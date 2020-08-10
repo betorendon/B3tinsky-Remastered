@@ -1,6 +1,7 @@
 ---
 title: "ATBS - Reading And Writing Files"
 date: "2020-01-18"
+tags: ["ATBS", "Python"]
 ---
 Knowing how to use and manipulate files is critical for any programmer or any person who wishes to do anything with code.
 The sole reason of my last statement is that *__Whatever happens in the compiler, stays in the compiler__*, meaning that there is no magical save button for anything. You may save the CODE, but not its outputs. This means that you could play a game, but if you exit or turn the console off, you would have to start from the beginning. 
