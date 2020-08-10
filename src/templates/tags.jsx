@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
-
+import camelCase from "lodash/camelCase"
+import lowerCase from "lodash/lowerCase"
 // Components
 import { Link, graphql } from "gatsby"
+import { toLower } from "lodash"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -20,7 +22,7 @@ const Tags = ({ pageContext, data }) => {
           const { title } = node.frontmatter
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={`../../blog/${slug}`}>{title}</Link>
             </li>
           )
         })}

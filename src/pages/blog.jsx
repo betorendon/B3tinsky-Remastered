@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import { faTags } from "@fortawesome/free-solid-svg-icons"
+import { faBug } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import blogStyles from "../styles/pages/blog.module.scss"
 
@@ -31,7 +31,14 @@ const BlogPage = () => {
       <Head title="Blog" />
       <h1>
         Blog{" "}
-
+        <span style={{ float: "right" }} >
+          {" "}
+          <Link to="/tags">
+          <p>
+            <FontAwesomeIcon icon={faBug} transform="grow-5 up-5" />
+          </p>
+          </Link>
+        </span>
       </h1>
       <ol className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map((edge, index) => {
