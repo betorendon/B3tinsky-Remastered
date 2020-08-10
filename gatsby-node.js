@@ -47,16 +47,6 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = res.data.allMarkdownRemark.edges
-
-  // Create post detail pages
-  posts.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: blogTemplate,
-    })
-  })
-
   // Extract tag data from query
   const tags = res.data.tagsGroup.group
 
