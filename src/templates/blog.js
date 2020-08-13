@@ -26,9 +26,9 @@ const Blog = (props) => {
     return (
         <Layout>
           <Head title={props.data.markdownRemark.frontmatter.title} />
-          <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-          <p>{props.data.markdownRemark.frontmatter.date}</p>
-          <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}></div>
+          <h1 style={{textAlign: "center"}}>{props.data.markdownRemark.frontmatter.title}</h1>
+          <p style={{textAlign: "center"}}>{props.data.markdownRemark.frontmatter.date}</p>
+          <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}} style={{textAlign: "justify"}}></div>
         </Layout>
     )
 }
