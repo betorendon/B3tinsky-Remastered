@@ -8,7 +8,7 @@ We have learned previously (I hope) that an inherent property about an object, i
 In the same way, an inherent property of objects is its electrical charge.
 This concept of electrical charge is not new. Its roots begin with Thales of Miletus in 600 B.C. with a simple experiment.
 
-![Simple Experiment](https://cdn.kapwing.com/final_5f34775369f6c30015cbd3c5_345842.gif)
+<img src="https://cdn.kapwing.com/final_5f34775369f6c30015cbd3c5_345842.gif" alt="Experiment" width="100%"></img>
 
 The experiment consists of rubbing a plastic pipe with fur (although the materials can be different) and then approach it to a suspended object and see it move away.
 BUT 🍑 if we were to use a glass rod and rubbed it with silk, the opposite effect would happen, making the glass rod attract the suspended object (in this case made of plastic).
@@ -54,7 +54,7 @@ Even though Protons and Electrnos carry an equal but opposite charge, their mass
 
 Atoms are made up of a nucleus of positively charged protons surrounded by negatively charged electrons.
 
-![Atom](https://media.giphy.com/media/tAPkUnA2GQNVK/giphy.gif)
+<img src="https://media.giphy.com/media/tAPkUnA2GQNVK/giphy.gif" alt="Atom" width="100%"></img>
 
 On average, most objects have an equal number of positive and negative charges, making them charge-neutral. So, when all of the charges in an object are added, __the sum is zero__.
 
