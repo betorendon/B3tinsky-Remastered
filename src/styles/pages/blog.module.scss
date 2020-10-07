@@ -5,30 +5,6 @@
     font-style: $font-style;
 }
 
-$Javascript: rgb(255, 230, 8), black, bolder, normal;
-$React: rgb(82, 186, 255), white, bolder, normal;
-$Python: #3776ab, #ffd343, bolder, normal;
-$ATBS: rgb(248, 255, 144), black, bolder, normal;
-$ComputerScience: rgb(12, 85, 16), rgb(255, 255, 255), bolder, normal;
-$Linux: rgb(0, 0, 0), rgb(255, 255, 255), bolder, normal;
-$Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
-
-[class*="Javascript"]{@include tag($Javascript...);}
-[class*="React"]     {@include tag($React...); border-color: rgb(91, 92, 92) !important;}
-[class*="Python"]    {@include tag($Python...); border-color: white !important}
-[class*="ATBS"]    {@include tag($ATBS...); border-color: rgb(54, 105, 54) !important;}
-[class*="Computer Science"]    {@include tag($ComputerScience...); border-color: rgb(0, 0, 0) !important;}
-[class*="Linux"]    {@include tag($Linux...); border-color: rgb(255, 214, 30) !important;}
-[class*="Bash"]    {@include tag($Bash...); border-color: rgb(255, 255, 255) !important;}
-
-[class*="tagPill-"] {
-    border-radius: 4px;
-    border: 2px solid black;
-    padding: 2px 6px;
-    margin-right: 5px;
-    font-size: 90%;
-    float: right;    
-}
 
 .posts {
     list-style-type: none;
@@ -37,14 +13,14 @@ $Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
     // padding: 1rem;
 }
 
-FontAwesomeIcon:hover {
+[class*=fa-bug]:hover {
     color: orange;
 }
-
+a {color:inherit;}
 .post {
     // margin: 1rem 0;
 
-    a {
+    a h2 {
         // background: white;
         color: white;
         display: block;
@@ -69,4 +45,32 @@ FontAwesomeIcon:hover {
         font-size: 1rem;
         font-style: italic;
     }
+}
+
+
+$Javascript: rgb(255, 230, 8), black, bolder, normal;
+$React: rgb(82, 186, 255), white, bolder, normal;
+$Python: #3776ab, #ffd343, bolder, normal;
+$ATBS: rgb(248, 255, 144), black, bolder, normal;
+$CS: rgb(2, 241, 14), rgb(0, 0, 0) , bolder, normal;
+$Linux: rgb(0, 0, 0), rgb(255, 255, 255), bolder, normal;
+$Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
+$Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
+
+[class*="Javascript"]{@include tag($Javascript...);}
+[class*="React"]     {@include tag($React...); border-color: rgb(91, 92, 92) !important;}
+[class*="Python"]    {@include tag($Python...); border-color: white !important}
+[class*="ATBS"]    {@include tag($ATBS...); border-color: rgb(54, 105, 54) !important;}
+[class*="CS"]    {@include tag($CS...); border-color: rgb(0, 0, 0) !important;}
+[class*="Linux"]    {@include tag($Linux...); border-color: rgb(255, 214, 30) !important;}
+[class*="Bash"]    {@include tag($Bash...); border-color: rgb(255, 255, 255) !important;}
+[class*="Physics"]    {@include tag($Physics...); border-color: rgb(0,0,0) !important;}
+
+[class*="tagPill-"] {
+    border-radius: 4px;
+    border: 2px solid black;
+    padding: 2px 6px;
+    margin-right: 5px;
+    font-size: 90%;
+    float: right;    
 }

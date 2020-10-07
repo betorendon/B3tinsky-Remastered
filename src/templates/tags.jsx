@@ -1,10 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
-import camelCase from "lodash/camelCase"
-import lowerCase from "lodash/lowerCase"
+import Layout from "../components/layout"
 // Components
 import { Link, graphql } from "gatsby"
-import { toLower } from "lodash"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -14,25 +12,27 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <div>
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const { slug } = node.fields
-          const { title } = node.frontmatter
-          return (
-            <li key={slug}>
-              <Link to={`../../blog/${slug}`}>{title}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      {/*
+    <Layout>
+      <div>
+        <h1>{tagHeader}</h1>
+        <ul>
+          {edges.map(({ node }) => {
+            const { slug } = node.fields
+            const { title } = node.frontmatter
+            return (
+              <li key={slug}>
+                <Link to={`../../blog/${slug}`}>{title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+        {/*
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
-    </div>
+        <Link to="/tags"><p>All tags</p></Link>
+      </div>
+    </Layout>
   )
 }
 

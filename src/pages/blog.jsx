@@ -53,7 +53,9 @@ const BlogPage = () => {
                     ? edge.node.frontmatter.tags.map((tag, i) => {
                         return (
                           <span key={i} className={`tagPill-${tag}`}>
+                            <Link to={`/tags/${tag.toLowerCase()}`}>
                             {tag}
+                            </Link>
                           </span>
                         )
                       })

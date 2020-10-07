@@ -1,7 +1,7 @@
 ---
 title: "Big O Notation"
 date: "2020-06-18"
-tags: ["Computer Science"]
+tags: ["CS"]
 ---
 
 At first running our code may seem like a trivial task as in "Compile -> Run -> Hackerman", and that is probably because at the beginning of our careers, we don't worry about big programs (which come with big problems) or about the computer taking to long processing our code. 
