@@ -16,7 +16,7 @@
 [class*=fa-bug]:hover {
     color: orange;
 }
-a {color:inherit;}
+
 .post {
     // margin: 1rem 0;
 
@@ -72,5 +72,6 @@ $Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
     padding: 2px 6px;
     margin-right: 5px;
     font-size: 90%;
-    float: right;    
+    float: right;   
+    a {color:inherit;} 
 }

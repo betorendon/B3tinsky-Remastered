@@ -6,10 +6,10 @@ import { faBug } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import blogStyles from "../styles/pages/blog.module.scss"
 
-const BlogPage = () => {
+const ChallengesPage = () => {
   const data = useStaticQuery(graphql`
   query {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/posts/"}}, sort: { fields: frontmatter___date, order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/challenges/"}}, sort: { fields: frontmatter___date, order: DESC }) {
       edges {
         node {
           frontmatter {
@@ -28,24 +28,24 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <Head title="Blog" />
-      <h1>
-        Blog{" "}
-        <span style={{ float: "right" }} >
+      <Head title="Challenges" />
+      <h1 style={{textAlign: "center"}}>
+        Challenges{" "}
+        {/* <span style={{ float: "right" }} >
           {" "}
           <Link to="/tags">
           <p>
             <FontAwesomeIcon icon={faBug} transform="grow-5 up-5" />
           </p>
           </Link>
-        </span>
+        </span> */}
       </h1>
       <ol className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map((edge, index) => {
           return (
             <li key={index} className={blogStyles.post}>
               <hr />
-              <Link to={`/blog/${edge.node.fields.slug}`}>
+              <Link to={`/challenges/${edge.node.fields.slug}`}>
                 <h2>{edge.node.frontmatter.title}</h2>
                 <p>
                   {edge.node.frontmatter.date}{" "}
@@ -71,4 +71,4 @@ const BlogPage = () => {
   )
 }
 
-export default BlogPage
+export default ChallengesPage

@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 5%;
+}
+
+.projectgrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+}
+
+.posts {
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+.post {
+    margin: 1rem 0;
+
+    h1 {
+        color: white;
+        display: block;
+        font-family: 'Monoton';
+        font-size: 100%;
+    }
+
+    a:hover {
+        h1 { 
+            color: orange;
+            text-shadow: 0 10px 1px black; 
+        }
+        p {
+            opacity: 100%;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+        color: white
+    }
+
+    p {
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        opacity: 0%;
+    }
+}
+
+.title {
+    text-align: center;
+    font-family: 'Monoton';
+}
+
+@media(max-width: 770px) {
+    .container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 10% 5%;
+    }
+    .projectgrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 5px;
+    }
+    .post { 
+        a p {
+        opacity: 100%;
+        }
+    }
+    .title {
+        padding-top: 5%;
+    }
+}
