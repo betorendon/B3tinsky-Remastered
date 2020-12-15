@@ -51,9 +51,9 @@ query {
                           borderRadius: "50%",
                           boxShadow:
                           `
-                          0 0 0 5px white,
-                          0 0 0 10px rgb(255, 115, 0),
-                          0 0 0 15px black
+                          0 0 0 5px  rgb(255, 199, 46),
+                          0 0 0 10px  rgb(255, 89, 89),
+                          0 0 0 15px  rgb(155, 48, 255)
                           `
                         }}
                       alt="TheBert"

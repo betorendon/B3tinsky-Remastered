@@ -29,7 +29,7 @@ const ChallengesPage = () => {
   return (
     <Layout>
       <Head title="Challenges" />
-      <h1 style={{textAlign: "center"}}>
+      <h1 className={blogStyles.title} style={{textAlign:"center"}}>
         Challenges{" "}
         {/* <span style={{ float: "right" }} >
           {" "}

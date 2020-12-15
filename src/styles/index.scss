@@ -46,19 +46,48 @@ a {
     background-size: 10%; */
 }
 
+.indexH3 {
+    text-align: center;
+    padding: 5% 0;
+    font-family: "Monoton";
+}
+
+.indexCard {
+    border: solid rgb(255, 199, 46) 5px ;
+    box-shadow:
+    0 0 0 5px rgb(255, 89, 89),
+    0 0 0 10px rgb(155, 48, 255)
+    ;
+    border-radius: 10px;
+    ul {
+        margin: 20px;
+        list-style-type: none;
+        padding-inline-start: 0;
+        li {
+            p {
+                color: white;
+                font-weight: bold;
+            }
+            p:hover {
+                color: orange;
+            }
+        } 
+    } 
+}
+
 #homeBackground {
-    background: url('HomeBackground.gif');
-    background-repeat: no-repeat;
+    background: fixed url('15.gif');
+    // background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
     background-size: cover;
 }
 
 @media (max-width: 1200px) {
     #homeBackground {
-        background: url('HomeBackground.gif') no-repeat 20%;
+        background: fixed url('15.gif') no-repeat 50% ;
         width: 100%;
-        height: 100vh;
+        // height: 100vh;
         background-size: cover;
     }
 }

@@ -29,7 +29,7 @@ const BlogPage = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <h1>
+      <h1 className={blogStyles.title}>
         Blog{" "}
         <span style={{ float: "right" }} >
           {" "}
