@@ -26,7 +26,7 @@ const BooksPage = () => {
           extension: { regex: "/(jpg)|(png)/" }
           relativeDirectory: { regex: "/(images/books)|(books)/" }
         }
-        sort: { fields: modifiedTime, order: DESC }
+        sort: { fields: birthTime, order: DESC }
       ) {
         totalCount
         edges {
