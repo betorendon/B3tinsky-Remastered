@@ -1,12 +1,12 @@
 .showMeTheRiddle {
 
+    transition: 0.5s;
     opacity: 0%;
-
-    
-    &:hover {
-        opacity: 100%;
-    }
-
     font-size: 1rem;
 
+}
+
+.showMeTheRiddle:hover {
+    transition: 0.5s;
+    opacity: 100% !important;
 }

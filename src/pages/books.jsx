@@ -6,7 +6,6 @@ import booksStyles from "../styles/pages/books.module.scss"
 import Img from "gatsby-image"
 
 const BooksPage = () => {
-  // const [curr, setCurr] = useState(null)
   const data = useStaticQuery(graphql`
     query {
       allDirectory(
@@ -26,7 +25,7 @@ const BooksPage = () => {
           extension: { regex: "/(jpg)|(png)/" }
           relativeDirectory: { regex: "/(images/books)|(books)/" }
         }
-        sort: { fields: birthTime, order: DESC }
+        sort: { fields: base, order: ASC }
       ) {
         totalCount
         edges {
