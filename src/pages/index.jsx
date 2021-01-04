@@ -70,7 +70,7 @@ const IndexPage = () => {
         edges {
           node {
             childImageSharp {
-              fluid (maxWidth: 250, quality: 100) {
+              fluid(maxWidth: 250, quality: 100) {
                 sizes
                 aspectRatio
                 srcSet
@@ -87,18 +87,22 @@ const IndexPage = () => {
     }
   `)
 
+  const phrases = ["An idle mind is the devil's workshop", "Hello", "Why, if one would lie on a fly it would assuredly die."]
   return (
     <div id="homeBackground">
       <Layout>
         <Head title="Home" />
-        <h3 className={"indexH3"}>Latest Articles</h3>
+
+        <h3 className={"indexH3"}>Latest Blog Posts</h3>
         <div className={"indexCard"}>
           <ul>
             {data.articles.edges.map((edge, index) => {
               return (
                 <li key={index}>
                   <Link to={`/blog/${edge.node.fields.slug}`}>
-                    <p style={{textAlign:"center"}}>{edge.node.frontmatter.title}</p>
+                    <p style={{ textAlign: "center" }}>
+                      {edge.node.frontmatter.title}
+                    </p>
                   </Link>
                 </li>
               )
@@ -106,7 +110,7 @@ const IndexPage = () => {
           </ul>
         </div>
 
-        <h3 className={"indexH3"}>Last Project</h3>
+        <h3 className={"indexH3"}>Latest Project</h3>
         <div className={"indexCard"}>
           <ul>
             {data.projects.edges.map((edge, index) => {
@@ -117,7 +121,9 @@ const IndexPage = () => {
                       fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
                       alt={edge.node.frontmatter.title}
                     />
-                    <p style={{textAlign:"center"}}>{edge.node.frontmatter.title}</p>
+                    <p style={{ textAlign: "center" }}>
+                      {edge.node.frontmatter.title}
+                    </p>
                   </Link>
                 </li>
               )
@@ -125,16 +131,16 @@ const IndexPage = () => {
           </ul>
         </div>
 
-        <h3 className={"indexH3"}>Last Book</h3>
-        <div style={{padding:"0 30%"}} >
-        {data.books.edges.map((edge, index) => {
-              return (
-                    <Img
-                      fluid={edge.node.childImageSharp.fluid}
-                      className={"indexCard"}
-                    />
-              )
-            })}
+        <h3 className={"indexH3"}>Latest Book Read</h3>
+        <div style={{ padding: "0 30%" }}>
+          {data.books.edges.map((edge, index) => {
+            return (
+              <Img
+                fluid={edge.node.childImageSharp.fluid}
+                className={"indexCard"}
+              />
+            )
+          })}
         </div>
       </Layout>
     </div>

@@ -1,7 +1,7 @@
 ---
 title: "ATBS - Regex"
 date: "2020-01-03"
-tags: ["ATBS", "Python"]
+tags: ["Python"]
 ---
 We all know and use the mighty *"CTRL + F"* to search for a specific word or sentence, but have you ever heard of *Regular Expressions?*
 Regular Expressions, are basically that. Symbolically memorable patterns or expressions, that can be identified on sight. An example would be phone numbers, since no matter where you live, there are certain conventions that help you identify a phone number is in fact, a phone number. Conventions like hyphens (the placement depends on where you live), area codes and symbols. This way you quickly know what you are looking at.

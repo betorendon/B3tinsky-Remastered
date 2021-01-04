@@ -1,7 +1,7 @@
 ---
 title: "Why use Adobe XD?"
 date: "2020-12-12"
-# tags: ["AdobeXD", "Python"]
+tags: ["Design"]
 ---
 As a web developer the fun part is getting right to action, so when I learned about Adobe XD, I thought "well whats the point?" because I could save time by coding it instead of designing it first. At some point I also perceived it as a tool for UX/UI designers, __*not web developers*__.
 After using it a bit (even though I suck at it) I noticed why it should be part of a web developer's workflow.

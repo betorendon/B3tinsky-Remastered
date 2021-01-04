@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "@hot-loader/react-dom": "^16.13.0",
@@ -51,7 +52,8 @@
     "react-icons": "^3.10.0",
     "react-router-dom": "^5.2.0",
     "sharp": "^0.22.1",
-    "url-join": "^4.0.0"
+    "url-join": "^4.0.0",
+    "windups": "^1.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
