@@ -60,6 +60,7 @@ $CS: rgb(2, 241, 14), rgb(0, 0, 0) , bolder, normal;
 $Linux: rgb(0, 0, 0), rgb(255, 255, 255), bolder, normal;
 $Bash: rgb(189, 189, 189), rgb(255, 255, 255), bolder, normal;
 $Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
+$Life: rgb(255, 150, 30), rgb(0,0,0), bolder, normal;
 
 [class*="Javascript"]{@include tag($Javascript...);}
 [class*="React"]     {@include tag($React...);}
@@ -69,11 +70,12 @@ $Physics: rgb(255,255,255), rgb(0,0,0), bolder, normal;
 [class*="Linux"]    {@include tag($Linux...);}
 [class*="Bash"]    {@include tag($Bash...);}
 [class*="Physics"]    {@include tag($Physics...);}
+[class*="Life"]    {@include tag($Life...);}
 
 [class*="tagPill-"] {
     border-radius: 20px;
-    border: 2px solid black;
-    padding: 2px 6px;
+    // border: 2px solid black;
+    padding: 5px 10px;
     margin-right: 5px;
     font-family: "Monoton";
     font-size: 70%;

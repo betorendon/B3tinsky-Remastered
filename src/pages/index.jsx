@@ -70,7 +70,7 @@ const IndexPage = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 250, quality: 100) {
+              fluid(maxWidth: 500, quality: 100) {
                 sizes
                 aspectRatio
                 srcSet
@@ -132,7 +132,7 @@ const IndexPage = () => {
         </div>
 
         <h3 className={"indexH3"}>Latest Book Read</h3>
-        <div style={{ padding: "0 30%" }}>
+        <div style={{ padding: "0 25%" }}>
           {data.books.edges.map((edge, index) => {
             return (
               <Img
