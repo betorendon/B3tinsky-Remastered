@@ -70,7 +70,7 @@ const IndexPage = () => {
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 500, quality: 100) {
+              fluid {
                 sizes
                 aspectRatio
                 srcSet
