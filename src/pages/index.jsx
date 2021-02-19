@@ -77,8 +77,6 @@ const IndexPage = () => {
                 base64
                 src
                 originalImg
-                ...GatsbyImageSharpFluid
-                ...GatsbyImageSharpFluidLimitPresentationSize
               }
             }
           }
