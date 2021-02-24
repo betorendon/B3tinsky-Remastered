@@ -77,6 +77,16 @@ a {
     } 
 }
 
+
+.Typewriter__wrapper {
+    color: white;
+    text-align: center;
+}
+
+.typeWriterDiv {
+    padding: 35% 20%;
+}
+
 #homeBackground {
     background: fixed url('15.gif');
     // background-repeat: no-repeat;
@@ -91,6 +101,9 @@ a {
         width: 100%;
         // height: 100vh;
         background-size: cover;
+    }
+    .typeWriterDiv {
+        padding: 100% 5% 150%;
     }
 }
 

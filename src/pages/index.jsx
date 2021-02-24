@@ -3,6 +3,9 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
+import Typewriter from "typewriter-effect"
+import { random } from "lodash"
+import { faHeart } from "@fortawesome/free-solid-svg-icons"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -85,12 +88,33 @@ const IndexPage = () => {
     }
   `)
 
-  const phrases = ["An idle mind is the devil's workshop", "Hello", "Why, if one would lie on a fly it would assuredly die."]
+  const phrases = [
+    "Idle hands are the devil's workshop; idle lips are his mouthpiece - Proverbs 16:27-29",
+    "Dwell on the beauty of life. Watch the stars, and see yourself running with them - <b>Marcus Aurelius</b>",
+    "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth - <b>Marcus Aurelius</b>",
+    "It is not death that a man should fear, but he should fear never beginning to live - <b>Marcus Aurelius</b>",
+    "Whenever you are about to find fault with someone, ask yourself the following question: What fault of mine most nearly resembles the one I am about to criticize - <b>Marcus Aurelius</b>",
+    "How much more grievous are the consequences of anger than the causes of it - <b>Marcus Aurelius</b>",
+    "Live a good life. If there are gods and they are just, then they will not care how devout you have been, but will welcome you based on the virtues you have lived by. If there are gods, but unjust, then you should not want to worship them. If there are no gods, then you will be gone, but will have lived a noble life that will live on in the memories of your loved ones - <b>Marcus Aurelius</b>",
+    "Though you break your heart, men will go on as before - <b>Marcus Aurelius</b>",
+    "Nowhere can man find a quieter or more untroubled retreat than in his own soul - <b>Marcus Aurelius</b>",
+    "The things you think about determine the quality of your mind - <b>Marcus Aurelius</b>",
+    "Life is opinion - <b>Marcus Aurelius</b>",
+    "The honest and good man ought to be exactly like a man who smells strong, so that the bystander as soon as he comes near him must smell wheteher he choose or not - <b>Marcus Aurelius</b>"
+
+  ]
+  phrases.sort(() => random() - 0.5);
   return (
     <div id="homeBackground">
       <Layout>
         <Head title="Home" />
+        <div className={"typeWriterDiv"}>
+        <Typewriter
+          options={{loop: true, autoStart: true, strings: phrases, pauseFor: 5000, delay: 50, deleteSpeed: 20}}
+          className={"typeWriterStyle"}
+        />
 
+        </div>
         <h3 className={"indexH3"}>Latest Blog Posts</h3>
         <div className={"indexCard"}>
           <ul>
