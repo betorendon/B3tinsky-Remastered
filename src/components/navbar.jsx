@@ -52,9 +52,9 @@ class Navbar extends Component {
             <li>
               <Link className={navStyles.listLink} to="/projects">Projects</Link>
             </li>
-            <li>
+            {/* <li>
               <Link className={navStyles.listLink} to="/challenges">Challenges</Link>
-            </li>
+            </li> */}
           </ul>
       </nav>
     )
