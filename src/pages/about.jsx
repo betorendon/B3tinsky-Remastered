@@ -5,6 +5,7 @@ import Head from "../components/head"
 import Img from "gatsby-image"
 import AboutStyles from "../styles/pages/about.module.scss"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faAward } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { WindupChildren, useWindupString } from "windups"
@@ -65,11 +66,7 @@ const AboutPage = () => {
         />
       ))}
       <p style={{ color: "white" }}>
-        <WindupChildren>
-          {
             "I'm a Computer Science student with an interest in software & web development. I love building things and learning new stuff. The purpose of this website is documenting my learning in a public manner (kind of like a Feynman Technique) while also giving a small glimpse into my world."
-          }
-        </WindupChildren>
       </p>
       <br />
 
@@ -147,6 +144,10 @@ const AboutPage = () => {
       
       <Link to="https://www.linkedin.com/in/betorendon/">
         <FontAwesomeIcon icon={faLinkedin} className={AboutStyles.brandIcon} transform="grow-20" />
+      </Link>
+
+      <Link to="/certifications">
+        <FontAwesomeIcon icon={faAward} className={AboutStyles.brandIcon} transform="grow-20" />
       </Link>
     </Layout>
   )
